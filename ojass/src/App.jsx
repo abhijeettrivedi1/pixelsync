@@ -15,14 +15,14 @@ function App() {
  }
  
   return (
-
-    <div className="container"><h1>     Search</h1> <div className="search"> <div className="row"> <div className="col-md-6"> <div className="search-1"> <i className='bx bx-search-alt'></i> </div> </div> <div className="col-md-6"> <div> <div className="search-2"> <i className='bx bxs-map' ></i> <input type="text" value={search} onChange={(e) => {
+    
+    <div className="container"><h1>     Search On Kuch_Bhi</h1> <div className="search"> <div className="row"> <div className="col-md-6"> <div className="search-1"> <i className='bx bx-search-alt'></i> </div> </div> <div className="col-md-6"> <div> <div style={{"border":"1px solid black"}} className="search-2"> <i className='bx bxs-map' ></i> <input  type="text" value={search} onChange={(e) => {
       setSearch(e.target.value)
     }} placeholder="Seach what you want" /> <button onClick={handleSubmit}>Search</button> </div> </div> </div> </div> 
     
     
      </div>
-      
+      <hr />
       {console.log(search)}
     
 
@@ -30,7 +30,7 @@ function App() {
     <div>
       {result && result.map((item, index) => {
         return (
-          <div key={index}>
+          <div key={index} style={{"border":"5px solid black","width":"90vw"}}>
             <hr />
             <h2>{item.title}</h2>
             
