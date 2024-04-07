@@ -39,6 +39,17 @@ function App() {
             <p>{`${item.snippet}`} <a href={`${item.link}`}>Read more...</a></p>
             
             <img src={`${item.thumbnail}`} alt="" />
+            <h3>Site Links</h3>
+            {
+              item.sitelinks && item.sitelinks.inline.map((jojo, index) => {
+                return (
+                  <a href={`${jojo.link}`}>{jojo.title}</a>
+                  
+                
+                )
+              })
+            }
+          
             <hr />
           </div>
         )

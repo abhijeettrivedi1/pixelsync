@@ -28,6 +28,7 @@ app.post('/', async (req, res) => {
         "related_questions": response.related_questions,
      });
     } catch (error) {
+        console.log(error);
         res.status(500).json({ error: error.message });
     }
 });
