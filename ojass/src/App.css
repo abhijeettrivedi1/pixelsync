@@ -1,42 +1,110 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background-image: linear-gradient(to right top,#D91B23,#124FEB);
+  height: 100vh;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.search {
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 5px
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-1 {
+  position: relative;
+  width: 100%
+}
+
+.search-1 input {
+  height: 45px;
+  border: none;
+  width: 100%;
+  padding-left: 34px;
+  padding-right: 10px;
+  border-right: 2px solid #eee
+}
+
+.search-1 input:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none
+}
+
+.search-1 i {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  font-size: 24px;
+  color: #eee
+}
+
+::placeholder {
+  color: #eee;
+  opacity: 1
+}
+
+.search-2 {
+  position: relative;
+  width: 100%
+}
+
+.search-2 input {
+  height: 45px;
+  border: none;
+  /* width: 100%; */
+  /* padding-left: 18px; */
+  padding-right: 100px
+}
+
+.search-2 input:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: none
+}
+
+.search-2 i {
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  font-size: 24px;
+  color: #eee
+}
+
+.search-2 button {
+  position: absolute;
+  right: 1px;
+  top: 0px;
+  border: none;
+  height: 45px;
+  background-color: red;
+  color: #fff;
+  width: 90px;
+  border-radius: 4px
+}
+
+@media (max-width:800px) {
+  .search-1 input {
+      border-right: none;
+      border-bottom: 1px solid #eee
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-2 i {
+      left: 4px
+  }
+
+  
+
+  .search-2 button {
+      height: 37px;
+      top: 5px
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+#search{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:20vh;
 }

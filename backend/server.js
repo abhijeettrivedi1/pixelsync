@@ -3,30 +3,21 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const{getJson}=require("serpapi");
-const corsOptions = {
-    origin: (origin, callback) => {
-        const allowedOrigins = [
-         "*"
-        ];
-        const isAllowed = allowedOrigins.includes(origin);
-        callback(null, isAllowed ? origin : false);
-    },
-    methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
-    credentials: true,
-};
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json());
 
 const PORT = 5001;
 
 
-app.get('/', async (req, res) => {
-    const {q}=req.body;
+app.post('/', async (req, res) => {
+    const {search}=req.body;
+    console.log(search);
     try {
         const response = await getJson({
             engine: "google",
             api_key: "0b427700f40a34159360b2a65efa55afe548a135364f618e5ed4400a261bca51",
-            q: "Jamshedpur",
+            q: search,
             location: " Mumbai",
         });
  
